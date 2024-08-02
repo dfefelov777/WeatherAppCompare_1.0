@@ -1,9 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   text-align: center;
   padding: 50px;
+  background-image: url('/static/images/image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
+
 
 form {
   margin: 20px 0;

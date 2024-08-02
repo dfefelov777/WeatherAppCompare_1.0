@@ -57,8 +57,6 @@ def fetch_weather_and_forecast(city, api_key, current_weather_url, forecast_url)
                         'description': daily_data['weather'][0]['description'],
                         'icon': daily_data['weather'][0]['icon'],
                     })
-            else:
-                print("Key 'daily' not found in the response")
 
             return weather_data, daily_forecasts
         except requests.exceptions.RequestException as e:
