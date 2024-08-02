@@ -82,4 +82,4 @@ def fetch_weather_and_forecast(city, api_key, current_weather_url, forecast_url)
             time.sleep(2)  # Задержка перед повторной попыткой
     return None, None, 'Failed to fetch data after multiple attempts'
 ## Заключение
-Проект "Weather Comparison App" демонстрирует возможности Django для создания интерактивных веб-приложений. Он предоставляет пользователям удобный способ сравнения погодных условий и прогнозов в разных городах.
+Проект "Weather Comparison App" демонстрирует возможности Django для создания интерактивных веб-приложений. Он предоставляет пользователям удобный способ сравнения погодных условий в разных городах.
