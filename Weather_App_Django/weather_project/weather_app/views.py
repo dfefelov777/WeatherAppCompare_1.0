@@ -4,7 +4,7 @@ import datetime
 import time
 
 def index(request):
-    api_key = {YOUR_API_KEY}
+    appid = '73e520e206575d5cc01e631ae70f98c6'
     current_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
     forecast_url = 'https://api.openweathermap.org/data/2.5/onecall?lat={}&lon={}&exclude=current,minutely,hourly,alerts&appid={}'
 
@@ -17,10 +17,10 @@ def index(request):
         error_message1, error_message2 = None, None
 
         if city1:
-            weather_data1, daily_forecasts1, error_message1 = fetch_weather_and_forecast(city1, api_key, current_weather_url, forecast_url)
+            weather_data1, daily_forecasts1, error_message1 = fetch_weather_and_forecast(city1, appid, current_weather_url, forecast_url)
 
         if city2:
-            weather_data2, daily_forecasts2, error_message2 = fetch_weather_and_forecast(city2, api_key, current_weather_url, forecast_url)
+            weather_data2, daily_forecasts2, error_message2 = fetch_weather_and_forecast(city2, appid, current_weather_url, forecast_url)
 
         context = {
             'weather_data1': weather_data1,
