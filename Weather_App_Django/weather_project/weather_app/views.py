@@ -2,6 +2,9 @@ from django.shortcuts import render
 import requests
 import datetime
 import time
+from .models import WeatherRequest
+
+
 
 def index(request):
     appid = '73e520e206575d5cc01e631ae70f98c6'
@@ -34,6 +37,8 @@ def index(request):
         return render(request, 'weather_app/index.html', context)
     else:
         return render(request, 'weather_app/index.html')
+
+
 
 
 def fetch_weather_and_forecast(city, api_key, current_weather_url, forecast_url):
@@ -70,3 +75,4 @@ def fetch_weather_and_forecast(city, api_key, current_weather_url, forecast_url)
             print(f"Attempt {attempt + 1} failed: {e}")
             time.sleep(2)  # Задержка перед повторной попыткой, чтобы приложение не падало
     return None, None, 'Failed to fetch data after multiple attempts'
+
